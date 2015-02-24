@@ -1,0 +1,10 @@
+.NodeList {
+    position: relative;
+}
+
+.NodeList:empty:after {
+    content: 'No child nodes.';
+    position: relative;
+    top: 0;
+    left: 0;
+}

@@ -1,0 +1,104 @@
+.NodeView {
+    border: 2px solid #a640e6;
+    padding: 10px;
+    margin: 3px 0;
+}
+
+.NodeView-name {
+    font: 21px/26px arial;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.NodeView-name:focus {
+    outline: 0 solid transparent;
+}
+
+.NodeView-children {
+    display: none;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.NodeView-controls {
+    height: 100%;
+    float: left;
+    margin-right: 10px;
+}
+
+.NodeView-controls-item {
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    margin: 0 3px;
+    cursor: pointer;
+    transition: transform .1s;
+}
+
+.NodeView-controls-toggle {
+    background: no-repeat 50% 50%;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAFWSURBVEhL7ZVNTsJAGIY/0KiJK7rxZ+cVjNGkcAGvpFGDot7BC3gRrIEYF668gAIbutCFJSr0GWZqaQszatjxbJjOfN/zMv0tDWNkjpT179xYBFjJBXwNhvJ8+y7fn+7Xnlp66M0yEUDB3Ulfnm7e5L4eOoVQQy099GZDkgAWgtNQuu2BOn5pRtYQI6cW6MWRDkkCWo1QOq1xoYHG4Kw4hDnWjNyAA5chCdg5XJfyckkf/fAa5EOMnLUsOHAZJp7kTutDb1FPpNj2V8WvV9R4mnxpRcQ/r8jWwZqeyQSALQRc5VD4Luq2I31H6AkLyKsXnmzuj/9AmtxzABRWG55qtKHkcW2RHGa+TXsPkTSPp+8Eee3Sk429YjkU7sBAI4KinbjIYWYAqJDrOCTlYcycTQ7OH5zeY3y6jvpqXLuK5bt2OTgHACHgKodfBfwF6zX4L4sACyIjtLXMpRAg+1IAAAAASUVORK5CYII=');
+}
+
+.NodeView_open > .NodeView-controls > .NodeView-controls-toggle {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAEsSURBVEhL7ZXNasJAFEYnVnSdXdX3UAx9sdafog/jK/QFakUrbrvsUt2oIIKpmnS+29whfzNjFi4KHhjEyb3ngAvjhBJxQ0rR5824B6wUCqwXPp0iXB2A+P1lQ6dI5KoAyy/Si1MkYg2s51L+/CdnKCLv8MyGMUDyjpT/RBcxcIdntog2sPrUyxmOYFZHbmA188W4a5YzmMEsdvLIBJbToxj38uV1r0onDUXkDnbTJAIY+OhvtXJv4NLRRbCbjqjAcoKfZWeUl8oOHVMEDrgYFfh+O4jgnP3njssZUwQOuBgVaHVdUWslFxpPWTnDEczEgQMuRgUeKnJh6IrHZoW+Y7H9mi9n8AwzHMEuHHAp8EaLc/aD8Gu0Dy+nILqxg1nsYDfN/ZVp5b8HhPgFj3b+t440u58AAAAASUVORK5CYII=');
+}
+
+.NodeView_open > .NodeView-children {
+    display: block;
+}
+
+.NodeView-controls-plus {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAVElEQVRIx2NgGBFgpePTkysdnv5HwUAx6lngALLg2X9UPGrBqAUYhkCSIi78GYsFn3Gqx5aEIen7GZXw0/+jFpBhAa0jeejng1ELBrkFtK4yBzUAAMghMAMAGRT5AAAAAElFTkSuQmCC') no-repeat 50% 50%;
+}
+
+.NodeView-controls-minus {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAN0lEQVRIx2NgGAWjYBTQD6x0fHpypQOVMNAsTAscnv5f6fCMSvjp/1ELyLCA1pE8CkbBKKAdAAAzR0gELN4kgwAAAABJRU5ErkJggg==') no-repeat 50% 50%;
+}
+
+.NodeView-controls-item:hover {
+    animation: animationFrames linear 0.3s;
+    animation-iteration-count: 1;
+    transform-origin: 50% 50%;
+    -webkit-animation: animationFrames linear 0.3s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-transform-origin: 50% 50%;
+}
+
+@keyframes animationFrames {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(-3px, 0px);
+    }
+    50% {
+        transform: translate(3px, 0px);
+    }
+    75% {
+        transform: translate(-3px, 0px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@-webkit-keyframes animationFrames {
+    0% {
+        -webkit-transform: translate(0px, 0px);
+    }
+    25% {
+        -webkit-transform: translate(-3px, 0px);
+    }
+    50% {
+        -webkit-transform: translate(3px, 0px);
+    }
+    75% {
+        -webkit-transform: translate(-3px, 0px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+    }
+}
+
+

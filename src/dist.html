@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Tree</title>
+    <script src="require.js"></script>
+</head>
+<body>
+<div id="Container"></div>
+</body>
+<script>
+    require(['Application'], function (Application) {
+        var app = new Application();
+        var container = document.getElementById('Container');
+        app.start(container);
+    })
+</script>
+</html>
